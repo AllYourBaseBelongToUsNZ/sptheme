@@ -1,0 +1,236 @@
+/*
+Theme Name: Bootstrap to WordPress
+Theme URI: 
+Author: Laurie Williams
+Author URI: lauriewilliamsdeveloper.com
+Description: Porting Bootstap to WordPress
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: twentythirteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px!important;
+  padding-bottom: 20px!important;
+  -webkit-background-size: cover!important;
+  -moz-background-size: cover!important;
+  -o-background-size: cover!important;
+  background-size: cover!important;
+  	overflow: hidden!important;
+
+}
+
+.admin-bar .navbar-fixed-top {
+	margin-top: 30px;
+}
+
+@media (min-width:768px) {
+	.sub-menu {
+		display: none;
+		position: absolute;
+		background: #222;
+		padding: 10px 15px;
+		width: 200px;		
+	}
+
+	li:hover .sub-menu {
+		display: block;
+	}
+
+}
+
+.sub-menu li {
+	margin-bottom: 10px;
+	list-style: none;
+}
+
+.sub-menu li:last-child {
+	margin-bottom: 0;
+}
+
+.sub-menu a  {
+	color: #999;
+	text-decoration: none;
+}
+
+.sub-menu a:hover  {
+	color: #fff;	
+}	
+
+.current-menu-item > a, .current-menu-parent > a {
+	background: #000;	
+}
+.current-menu-parent li a {
+	background: inherit;
+}
+.current-menu-parent .current-menu-item a {
+	color: #fff;
+	font-weight: bold;
+}
+
+.sidebar { 
+	margin-top: 40px;
+	color: #444;
+}
+
+.sidebar h3 {
+	color: #888;
+}
+
+.widget {
+	margin: 10px 0 30px;
+}
+
+.sidebar {
+	margin-top: 40px;
+	color:#444;
+}
+.sidebar h3{
+ color:#888;
+}
+
+.widget{
+margin-top:10px;
+margin-bottom:30px;
+}
+
+article.post{
+	margin: 20px 0 10px;
+}
+
+.featured-img,
+.portfolio-piece img,
+.portfolio-image img{
+	max-width:100%;
+	overflow:hidden;
+}
+.prev-next{
+font-size:24px;
+margin-top:30px;
+text-align:right;
+}
+@media(min-width:540px){
+ .portfolio-piece h4 {
+  font-size: 1.8em;
+ }
+ 
+ .prev-next{
+	margin-top:15px;
+	font-size:18px;
+ }
+ 
+}
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+}
+.sidebar-offcanvas{
+display:none;
+}
+.navbar-nav {
+float: right;
+margin: 0;
+}
+.navbar{
+min-height:88px;
+border-bottom: 8px solid #363636;
+}
+.logo {
+ max-height:46px;
+ max-width:236px;
+ 
+}
+.navbar-brand>img {
+display: block;
+padding-top:8px;
+
+}
+.img-responsive {
+ display: block;
+ height: auto;
+ max-width: 100%;
+ border-right:solid .09em #333;
+ padding-right:5px;
+}
+
+.navbar,
+.footer
+{
+  background-image: url('http://www.scottieproductions.co.nz/images/pattern_header.png');
+  background-repeat: repeat-x;
+}
+
+.row.footer-center
+{
+margin-right: -15px;
+margin-left: -15px;
+
+}
+.footer
+{
+border-top: 8px solid #363636;
+border-bottom:0px;
+height:62px;
+color: #6e6e6e;
+}
+
+.content {display:none;}
+.preload { width:100px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+.columns {
+  display: inline-block;
+  width: 200px;
+  height:100%;
+}
+
+
