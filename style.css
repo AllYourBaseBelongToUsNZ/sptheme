@@ -15,6 +15,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 /* Move down content because we have a fixed navbar that is 50px tall */
+
 body {
   padding-top: 50px!important;
   padding-bottom: 20px!important;
@@ -25,11 +26,67 @@ body {
   	overflow: hidden!important;
 
 }
+*{
+font-family:'Oswald';
+}
+p{
+color:#8a8a8a;
+font-size:14px;
+}
+
+
+.navbar-inverse .navbar-nav a {
+color: #9d9d9d;
+font-size: 14px;
+font-family:'Oswald';
+
+}
 
 .admin-bar .navbar-fixed-top {
 	margin-top: 30px;
+} 
+
+.container{
+height:100%!important;
 }
 
+.container.work{
+opacity: 0.9;
+background: url(http://www.scottieproductions.co.nz/images/container_bg.png) 50% 50% repeat;
+margin-top:5%;
+color: #fff;
+
+}
+
+.col-md-8.work-images{
+
+
+}
+
+.col-md-4.word-description{
+
+
+}
+
+.logo-title {
+ margin-left:10px;
+}
+
+.sub-menu > li li {
+
+}
+
+.sub-menu > li  li:hover{
+ background:green;
+}
+
+.sub-menu > li  li li{
+
+}
+
+.sub-menu > li  li li{
+ background:blue;
+}
 @media (min-width:768px) {
 	.sub-menu {
 		display: none;
@@ -64,7 +121,8 @@ body {
 }	
 
 .current-menu-item > a, .current-menu-parent > a {
-	background: #000;	
+	
+	color:#fff;
 }
 .current-menu-parent li a {
 	background: inherit;
@@ -176,22 +234,30 @@ display:none;
 .navbar-nav {
 float: right;
 margin: 0;
+margin-top:18px;
 }
 .navbar{
 min-height:88px;
 border-bottom: 8px solid #363636;
 }
 .logo {
- max-height:46px;
- max-width:236px;
+ min-height:46px;
+ min-width:236px;
  
 }
+
+.navbar-toggle {
+margin-top: 25px;
+}
+
 .navbar-brand>img {
 display: block;
 padding-top:8px;
 
 }
 .img-responsive {
+ min-width:236px;
+ min-height:46px;
  display: block;
  height: auto;
  max-width: 100%;
@@ -199,8 +265,11 @@ padding-top:8px;
  padding-right:5px;
 }
 
-.navbar,
-.footer
+.nav>li{
+ border-right:solid .09em #333;
+}
+
+.navbar
 {
   background-image: url('http://www.scottieproductions.co.nz/images/pattern_header.png');
   background-repeat: repeat-x;
@@ -214,9 +283,10 @@ margin-left: -15px;
 }
 .footer
 {
+background-image: url('http://www.scottieproductions.co.nz/images/pattern_header.png');
 border-top: 8px solid #363636;
 border-bottom:0px;
-height:62px;
+height: 130px;
 color: #6e6e6e;
 }
 
@@ -229,8 +299,67 @@ color: #6e6e6e;
 }
 .columns {
   display: inline-block;
-  width: 200px;
+  width: 180px;
   height:100%;
 }
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
 
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
 

@@ -3,7 +3,7 @@ function bootstap_style(){
   
   wp_enqueue_style('bootstrap_css',get_template_directory_uri() . '/css/bootstrap.min.css');
   wp_enqueue_style('custom_styles',get_template_directory_uri() . '/style.css');
-  wp_enqueue_style('font_styles',get_template_directory_uri() . '/styles/fonts.css');
+  //wp_enqueue_style('font_styles',get_template_directory_uri() . '/styles/fonts.css');
 }
 	add_action(wp_enqueue_scripts,'bootstap_style');
 
@@ -61,5 +61,11 @@ function enqueue_js() {
 	create_widget('Page Sidebar', 'page','Display on the sidebar on the sidebar page');
 	create_widget('Blog Sidebar', 'blog','Display on the sidebar on the blog page');
   
+      function load_fonts() {
+            wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Oswald');
+            wp_enqueue_style( 'googleFonts');
+        }
+    
+    add_action('wp_print_styles', 'load_fonts');
 	
 ?>

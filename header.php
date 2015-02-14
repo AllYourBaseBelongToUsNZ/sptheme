@@ -11,7 +11,6 @@
 	<?php echo bloginfo('name');?>
 	</title>
 
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 	
 	<?php wp_head(); ?>
 	
@@ -43,9 +42,9 @@ jQuery(function($) {
           </button>
 		  
 		  <div id="row1">
-		  <div class="columns logo"><a class="navbar-brand" href="#"><img class="img-responsive" src="<?php bloginfo('template_directory');?>/images/logo.png" height="150px" width="200px" alt="<?php the_title();?>"></a>
+		  <div class="columns logo"><a class="navbar-brand" href="#"><img class="img-responsive" src="<?php bloginfo('template_directory');?>/images/logo.png" height="150px" width="236px" alt="<?php the_title();?>"></a>
 			</div>
-		  <div class="columns"><p>Television & Film production</p></div>
+		  <div class="columns"><p class="logo-title">Television & Film production</p></div>
 		  </div>
 		  
 
