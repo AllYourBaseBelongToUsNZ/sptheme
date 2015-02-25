@@ -2,10 +2,10 @@
 	
 </body>
 
-
 <script>
 jQuery(function($) 
 {
+	
     var bgCounter = 0,
         backgrounds = [
 		
@@ -23,6 +23,7 @@ jQuery(function($)
 			<?php echo '"';?><?php the_field( 'background_images' ); ?><?php echo '",';?>
 		 <?php endwhile; endif; ?>
         ];
+		
     function changeBackground()
     {
         bgCounter = (bgCounter+1) % backgrounds.length;
@@ -53,7 +54,18 @@ jQuery(function($)
 				
 	</div>
 
-        </div>
+</div>
+<script>
+(function($) {
+
+    $.fn.scollbar = function() {
+
+        $('.word-description').jScrollPane();
+
+    }
+
+}(jQuery));
+</script>		
 <?php wp_footer(); ?>
 	
   </body>

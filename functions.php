@@ -1,4 +1,18 @@
 <?php
+add_filter('widget_text', 'do_shortcode');
+
+function add_custom_types_to_tax( $query ) {
+if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+
+// Get all your post types
+$post_types = get_post_types();
+
+$query->set( 'post_type', $post_types );
+return $query;
+}
+}
+add_filter( 'pre_get_posts', 'add_custom_types_to_tax' );
+
 function bootstap_style(){
   
   wp_enqueue_style('bootstrap_css',get_template_directory_uri() . '/css/bootstrap.min.css');
@@ -18,7 +32,10 @@ function enqueue_js() {
 	$wp_scripts->add_data('html5_shiv','conditional','lt IE 9');
 	$wp_scripts->add_data('respond_js','conditional','lt IE 9');
 	
-	wp_enqueue_script('js_files',get_template_directory_uri().'/js/bootstrap.min.js',array('jquery'),'',true);wp_enqueue_script('js_theme',get_template_directory_uri().'/js/theme.js',array('jquery','js_files'),'',true);
+	wp_enqueue_script('js_files',get_template_directory_uri().'/js/bootstrap.min.js',array('jquery'),'',true);
+	wp_enqueue_script('js_theme',get_template_directory_uri().'/js/theme.js',array('jquery','js_files'),'',true);
+	wp_enqueue_script('jsscrollpane','http://jscrollpane.kelvinluck.com/script/jquery.jscrollpane.min.js',array('jquery'),'',true);
+	wp_enqueue_script('mousewheel','http://jscrollpane.kelvinluck.com/script/jquery.mousewheel.js',array('jquery'),'',true);
 	
 }
 
@@ -55,11 +72,11 @@ function enqueue_js() {
 	
  }
  
-	create_widget('Front Page Left', 'front-left','Display on the left of the homepage');
-	create_widget('Front Page Centre', 'front-centre','Display on the left of the homepage');
-	create_widget('Front Page Right', 'front-right','Display on the left of the homepage');
-	create_widget('Page Sidebar', 'page','Display on the sidebar on the sidebar page');
-	create_widget('Blog Sidebar', 'blog','Display on the sidebar on the blog page');
+	create_widget('Front Page Social Media', 'front-right','Displays social media on the homepage');
+	// create_widget('Front Page Centre', 'front-centre','Display on the left of the homepage');
+	// create_widget('Front Page Right', 'front-right','Display on the left of the homepage');
+	// create_widget('Page Sidebar', 'page','Display on the sidebar on the sidebar page');
+	// create_widget('Blog Sidebar', 'blog','Display on the sidebar on the blog page');
   
       function load_fonts() {
             wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Oswald');

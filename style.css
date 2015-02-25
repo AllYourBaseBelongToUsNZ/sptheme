@@ -8,7 +8,7 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
-Text Domain: twentythirteen
+
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -17,6 +17,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* Move down content because we have a fixed navbar that is 50px tall */
 
 body {
+
   padding-top: 50px!important;
   padding-bottom: 20px!important;
   -webkit-background-size: cover!important;
@@ -25,7 +26,16 @@ body {
   background-size: cover!important;
   	overflow: hidden!important;
 
+
 }
+
+
+background{
+	min-height:1000px!important;
+}
+ul {
+    list-style-type: none;
+	}
 *{
 font-family:'Oswald';
 }
@@ -33,7 +43,106 @@ p{
 color:#8a8a8a;
 font-size:14px;
 }
+.thumb-description{
+margin-left: 120px;
+max-width: 250px;
+margin-top: 70px;
+}
 
+.home-slider-thumbs{
+ padding-bottom:5px;
+}
+.logo-title a{
+color:#9d9d9d;
+}
+.logo-title a:hover{
+color:#fff;
+text-decoration:none;
+}
+
+.home-thumbnails{
+ width:33%;
+ height:30%;
+}
+.thumb-order-home-li{
+ padding:4px;
+}
+.thumb-order-home-li img{
+ width:30%;
+ height:150px;
+}
+.thumbnail{
+display: inline-block;
+padding: 4px;
+/* margin-bottom: 20px; */
+line-height: 1.42857143;
+background-color: #fff;
+border: 1px solid #ddd;
+/* border-radius: 4px; */
+-webkit-transition: border .2s ease-in-out;
+-o-transition: border .2s ease-in-out;
+transition: border .2s ease-in-out;
+
+}
+.word-front-right{
+padding-left: 40px;
+
+}
+.contents-home{
+max-height: 500px;
+padding-bottom: 10px;
+padding-top: 10px;
+}
+.contents-portfolio{
+padding-top: 10px;
+padding-bottom: 10px;
+}
+.word-description{
+
+ max-height:470px;
+}
+.shortdesc{
+color:#fff;
+}
+.thumb-padding li ul{
+list-style:none;
+}
+
+.thumb-order-home{
+background:black;
+padding:0;
+display: inline-flex;
+}
+.thumb-images{
+padding: 0px;
+margin-top:10px;
+
+}
+
+#facebook_status_box #facebook_canvas {
+overflow: auto;
+height: 385px;
+}
+
+
+.thumb-images img{
+width:33%;
+min-height:28%;
+max-height:180px;
+}
+.glyphicon {
+    font-size: 50px;
+	margin-top: 90%;
+}  
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+
+.col-md-8#carousel-bounding-box{
+padding-right: 10px;
+padding-left: 8px;
+}
 
 .navbar-inverse .navbar-nav a {
 color: #9d9d9d;
@@ -53,9 +162,21 @@ height:100%!important;
 .container.work{
 opacity: 0.9;
 background: url(http://www.scottieproductions.co.nz/images/container_bg.png) 50% 50% repeat;
-margin-top:5%;
+margin-top:3%;
 color: #fff;
 
+
+
+}
+
+.thumbnail.small{
+max-height:150px;
+max-width:33%;
+display:inline-block;
+}
+
+.thumbnails{
+padding: 0px!important;
 }
 
 .col-md-8.work-images{
@@ -64,7 +185,7 @@ color: #fff;
 }
 
 .col-md-4.word-description{
-
+overflow: auto;
 
 }
 
@@ -141,9 +262,7 @@ color: #fff;
 	color: #888;
 }
 
-.widget {
-	margin: 10px 0 30px;
-}
+
 
 .sidebar {
 	margin-top: 40px;
@@ -153,15 +272,13 @@ color: #fff;
  color:#888;
 }
 
-.widget{
-margin-top:10px;
-margin-bottom:30px;
-}
 
 article.post{
 	margin: 20px 0 10px;
 }
-
+.jspVerticalBar, .jspHorizontalBar, .jspTrack {
+    width:20px;
+}
 .featured-img,
 .portfolio-piece img,
 .portfolio-image img{
@@ -286,7 +403,7 @@ margin-left: -15px;
 background-image: url('http://www.scottieproductions.co.nz/images/pattern_header.png');
 border-top: 8px solid #363636;
 border-bottom:0px;
-height: 130px;
+height: 105px;
 color: #6e6e6e;
 }
 
@@ -302,64 +419,263 @@ color: #6e6e6e;
   width: 180px;
   height:100%;
 }
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-/* Styles */
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+#carousel-bounding-box.md-8.resize-slider{
+padding-right: 10px;
+padding-left: 8px;
+}
 }
 
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-/* Styles */
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+.col-md-4.word-description{
+overflow: auto;
+height: 600px;
+
 }
 
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-/* Styles */
+#facebook_status_box {
+width: 98%;
+margin-left:20px;
 }
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-/* Styles */
+#carousel-bounding-box.md-8.resize-slider{
+padding-right: 10px;
+padding-left: 8px;
+}
 }
 
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+.thumb-images img {
+display:none;
+}
+.col-md-4.word-description{
+overflow: auto;
+height: 600px;
+
+}
+.carousel {
+position: relative;
+margin-top: 30px;
+}
+.carousel-inner {
+width: 95%;
 }
 
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-/* Styles */
+.navbar{
+min-height:100px;
+}
+.navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+#carousel-bounding-box.md-8.resize-slider{
+padding-right: 10px;
+padding-left: 8px;
 }
 
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-/* Styles */
+.word-front-right {
+padding-left: 5px;
 }
 
-/* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
-/* Styles */
+#facebook_status_box {
+width: 97%!important;
+margin-left: 20px;
+
+
 }
 
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
 }
 
+
+
+
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+.col-md-4.word-description{
+overflow: auto;
+height: 300px;
+
+}
+#carousel-bounding-box.md-8.resize-slider{
+padding-right: 10px;
+padding-left: 8px;
+}
+.thumb-images img {
+display:none;
+}
+
+}
+@media (max-width: 769px) {
+.thumb-images img {
+display:none;
+}
+
+.word-front-right {
+padding-left: 5px;
+}
+
+#facebook_status_box {
+width: 98%!important;
+margin-left: 10px;
+
+
+}
+
+@media (max-width: 655px) {
+.thumb-images img {
+display:none;
+}
+
+.word-front-right {
+padding-left: 15px;
+padding-left: 15px;
+}
+
+#facebook_status_box {
+width: 98%!important;
+
+}
+
+
+}
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+
+.col-md-4.word-description{
+overflow: auto;
+height: 300px;
+
+}
+
+.word-front-right {
+padding-left: 0px;
+}
+
+#carousel-bounding-box.md-8.resize-slider{
+padding-right: 10px;
+padding-left: 8px;
+}
+
+.thumb-images img {
+display:none;
+}
+
+.carousel-inner {
+position: relative;
+width: 100%;
+overflow: hidden;
+margin-top: 34px;
+}
+
+
+#facebook_status_box {
+width: 97%!important;
+margin-left: 10px;
+
+}
+
+}
+
+@media (max-width: 470px) {
+.thumb-images img {
+display:none;
+}
+
+.word-front-right {
+padding-left: 0px;
+}
+
+.carousel-inner {
+position: relative;
+width: 100%;
+overflow: hidden;
+margin-top: 34px;
+}
+
+#facebook_status_box {
+width: 97%!important;
+margin-left: 10px;
+
+}
+
+}
+
+ /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+	
+.thumb-images img {
+display:none;
+}
+
+.word-front-right {
+padding-left: 3px;
+}
+
+.carousel-inner {
+position: relative;
+width: 100%;
+overflow: hidden;
+margin-top: 34px;
+}
+
+#facebook_status_box {
+width: 98%!important;
+margin-left: 10px;
+}
+        
+    }
+@media only screen and (max-width : 299px) {
+.thumb-images img {
+display:none;
+}
+
+.word-front-right {
+padding-left: 3px;
+}
+
+.carousel-inner {
+position: relative;
+width: 100%;
+overflow: hidden;
+margin-top: 34px;
+}
+
+}

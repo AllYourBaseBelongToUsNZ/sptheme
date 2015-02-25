@@ -18,9 +18,12 @@
 <div class="preload"><img src="<?php bloginfo('template_directory');?>/images/preloader.gif">
 </div>
 <script>
+jQuery.noConflict();
 jQuery(document).ready(function($){
     $('#page').fadeIn(900);
 });
+
+
 
 jQuery(function($) {
     $(".preload").fadeOut(1000, function() {
@@ -42,9 +45,9 @@ jQuery(function($) {
           </button>
 		  
 		  <div id="row1">
-		  <div class="columns logo"><a class="navbar-brand" href="#"><img class="img-responsive" src="<?php bloginfo('template_directory');?>/images/logo.png" height="150px" width="236px" alt="<?php the_title();?>"></a>
+		  <div class="columns logo"><a class="navbar-brand" href="<?php bloginfo('url');?>"><img class="img-responsive" src="<?php bloginfo('template_directory');?>/images/logo.png" height="150px" width="236px" alt="<?php the_title();?>"></a>
 			</div>
-		  <div class="columns"><p class="logo-title">Television & Film production</p></div>
+		  <div class="columns"><p class="logo-title"><a class="logo-title" href="<?php bloginfo('url');?>">Television & Film production</a></p></div>
 		  </div>
 		  
 
@@ -60,6 +63,4 @@ jQuery(function($) {
 			?>
         </div><!--/.navbar-collapse -->
       </div>
-    </nav>
-	
-	
+    </nav>	
